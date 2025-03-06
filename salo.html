@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>By KnopkaTag!</title>
+    <style>
+        body {
+            background: linear-gradient(45deg, #ff0000, #ff9900, #ffff00);
+            background-size: 400% 400%;
+            animation: gradientBG 5s infinite alternate;
+            text-align: center;
+            font-family: Arial, sans-serif;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            100% { background-position: 100% 50%; }
+        }
+
+        h1 {
+            font-size: 50px;
+            color: white;
+            text-shadow: 3px 3px 5px black;
+        }
+
+        button {
+            font-size: 30px;
+            padding: 20px 40px;
+            background: #ff0000;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            transition: all 0.3s;
+        }
+
+        button:hover {
+            background: #cc0000;
+            transform: scale(1.1);
+        }
+
+        button:active {
+            background: #990000;
+            transform: scale(0.9);
+        }
+    </style>
+</head>
+<body>
+
+    <h1>knopkatag</h1>
+    <button onclick="playSound()">SOSOLI</button>
+
+    <audio id="saloSound" src="salo.mp3"></audio>
+
+    <script>
+        function playSound() {
+            document.getElementById('saloSound').play();
+        }
+    </script>
+
+</body>
+</html>
