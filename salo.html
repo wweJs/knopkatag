@@ -3,12 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>By KnopkaTag!</title>
+    <title>Ошибка</title>
     <style>
         body {
-            background: linear-gradient(45deg, #ff0000, #ff9900, #ffff00);
-            background-size: 400% 400%;
-            animation: gradientBG 5s infinite alternate;
+            background: #222;
+            color: white;
             text-align: center;
             font-family: Arial, sans-serif;
             height: 100vh;
@@ -16,52 +15,54 @@
             justify-content: center;
             align-items: center;
             flex-direction: column;
+            user-select: none;
+            cursor: pointer;
         }
 
-        @keyframes gradientBG {
-            0% { background-position: 0% 50%; }
-            100% { background-position: 100% 50%; }
+        img {
+            width: 100px;
+            height: 100px;
+            filter: brightness(0) invert(1) sepia(1) saturate(10) hue-rotate(-50deg);
         }
 
         h1 {
-            font-size: 50px;
-            color: white;
-            text-shadow: 3px 3px 5px black;
+            font-size: 32px;
+            margin: 20px 0 10px;
+        }
+
+        p {
+            font-size: 20px;
+            margin-bottom: 20px;
         }
 
         button {
-            font-size: 30px;
-            padding: 20px 40px;
-            background: #ff0000;
-            color: white;
+            font-size: 20px;
+            padding: 10px 20px;
+            background: yellow;
+            color: black;
             border: none;
-            border-radius: 10px;
             cursor: pointer;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-            transition: all 0.3s;
+            border-radius: 5px;
+            font-weight: bold;
         }
 
         button:hover {
-            background: #cc0000;
-            transform: scale(1.1);
-        }
-
-        button:active {
-            background: #990000;
-            transform: scale(0.9);
+            background: gold;
         }
     </style>
 </head>
-<body>
+<body onclick="playSound()">
 
-    <h1>knopkatag</h1>
-    <button onclick="playSound()">SOSOLI</button>
+    <img src="error.svg" alt="помилеа">
+    <h1>Помилка!</h1>
+    <p>Натисніть, щоб вийти.</p>
+    <button>EXIT</button>
 
-    <audio id="saloSound" src="-salo-salo-salo-ukranske-salo-mp3cut-net.mp3"></audio>
+    <audio id="sound" src="-salo-salo-salo-ukranske-salo-mp3cut-net.mp3"></audio>
 
     <script>
         function playSound() {
-            document.getElementById('saloSound').play();
+            document.getElementById('sound').play();
         }
     </script>
 
