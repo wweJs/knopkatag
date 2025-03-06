@@ -48,6 +48,21 @@
 
         button:hover {
             background: gold;
+
+        .footer {
+            position: absolute;
+            bottom: 10px;
+            font-size: 14px;
+            color: gray;
+        }
+
+        .footer a {
+            color: yellow;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
@@ -60,6 +75,10 @@
 
     <audio id="sound" src="-salo-salo-salo-ukranske-salo-mp3cut-net.mp3"></audio>
 
+    <div class="footer">
+        SmartTag • Buy - <a href="https://t.me/smartta_g" target="_blank">t.me/smartta_g</a>
+    </div>
+    
     <script>
         function playSound() {
             document.getElementById('sound').play();
