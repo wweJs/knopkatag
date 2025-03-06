@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ошибка</title>
+    <style>
+        body {
+            background: #222;
+            color: white;
+            text-align: center;
+            font-family: Arial, sans-serif;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            user-select: none;
+            cursor: pointer;
+        }
+
+        img {
+            width: 100px;
+            height: 100px;
+            filter: brightness(0) invert(1) sepia(1) saturate(10) hue-rotate(-50deg);
+        }
+
+        h1 {
+            font-size: 32px;
+            margin: 20px 0 10px;
+        }
+
+        p {
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+
+        button {
+            font-size: 20px;
+            padding: 10px 20px;
+            background: yellow;
+            color: black;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        button:hover {
+            background: gold;
+        }
+    </style>
+</head>
+<body onclick="playSound()">
+
+    <img src="warning-svgrepo-com.svg" alt="помилеа">
+    <h1>Помилка!</h1>
+    <p>Натисніть, щоб вийти.</p>
+    <button>EXIT</button>
+
+    <audio id="sound" src="zhestokie-stony.mp3"></audio>
+
+    <script>
+        function playSound() {
+            document.getElementById('sound').play();
+        }
+    </script>
+
+</body>
+</html>
